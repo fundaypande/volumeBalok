@@ -8,7 +8,8 @@ export default class mainin extends Component {
   constructor(props){
     super(props)
     this.state = {
-      alas:0,
+      panjang:0,
+      tinggi : 0,
       tinggi:0,
       luas:0
     };
@@ -65,11 +66,16 @@ export default class mainin extends Component {
         <View style={{margin:20,padding: 10, backgroundColor:'#e3f2fd'}}>
             <TextInput style = {{height: 40}}
               placeholder="Masukkan Panjang"
-              onChangeText={(alas)=>this.setState({alas})}
+              onChangeText={(panjang)=>this.setState({panjang})}
               keyboardType = 'numeric'
             />
             <TextInput style = {{height: 40}}
               placeholder="Masukkan  Lebar"
+              onChangeText={(lebar)=>this.setState({lebar})}
+              keyboardType = 'numeric'
+            />
+            <TextInput style = {{height: 40}}
+              placeholder="Masukkan  Tinggi"
               onChangeText={(tinggi)=>this.setState({tinggi})}
               keyboardType = 'numeric'
             />
@@ -86,8 +92,9 @@ export default class mainin extends Component {
         <View style={{margin:20, backgroundColor:'#90caf9'}}>
           <Text style = {{padding: 10, fontSize: 20}} >
               Panjang =  {this.state.alas} {"\n"}
+              Lebar =  {this.state.lebar} {"\n"}
               Lebar =  {this.state.tinggi} {"\n"}
-              Luas = {(this.state.alas*this.state.tinggi/2)}
+              Luas = {(this.state.panjang*this.state.lebar*this.state.tinggi)}
           </Text>
          </View>
    </View>
