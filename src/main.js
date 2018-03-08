@@ -8,15 +8,16 @@ export default class mainin extends Component {
   constructor(props){
     super(props)
     this.state = {
-      alas:0,
+      lebar:0,
       tinggi:0,
-      luas:0
+      panjang:0
+
     };
   }
 
   render() {
     const { navigate } = this.props.navigation
-    
+
     return (
       <Container>
         <Header>
@@ -36,7 +37,7 @@ export default class mainin extends Component {
         </Header>
         <Content>
         <TouchableOpacity onPress={() => navigate('segitiga')}>
-          <Text>Go to first screen!!</Text>
+          <Text>Perrhitungan Segitigaa!!</Text>
         </TouchableOpacity>
           <List onPress={() => navigate('segitiga')}>
             <ListItem avatar>
@@ -58,25 +59,31 @@ export default class mainin extends Component {
 
         <View style={{backgroundColor:'#2196f3'}}>
            <Text style = {{padding: 10, fontSize: 20, color: 'white', textAlign:'center'}} >
-            Menghitung Luas Persegi Panjang
+            Menghitung Volume Balok
           </Text>
          </View>
 
         <View style={{margin:20,padding: 10, backgroundColor:'#e3f2fd'}}>
             <TextInput style = {{height: 40}}
               placeholder="Masukkan Panjang"
-              onChangeText={(alas)=>this.setState({alas})}
+              onChangeText={(panjang)=>this.setState({panjang})}
               keyboardType = 'numeric'
             />
             <TextInput style = {{height: 40}}
               placeholder="Masukkan  Lebar"
+              onChangeText={(lebar)=>this.setState({lebar})}
+              keyboardType = 'numeric'
+            />
+
+            <TextInput style = {{height: 40}}
+              placeholder="Masukkan  Tinggi"
               onChangeText={(tinggi)=>this.setState({tinggi})}
               keyboardType = 'numeric'
             />
 
             <Button
               onPress={()=>this.setState({
-                luas: (this.state.alas*this.state.tinggi/2)
+                luas: (this.state.lebar*this.state.tinggi*this.state.panjang)
               })}
               title="Hitung"
               accessibilityLabel="Klik untuk menghitung"
@@ -85,9 +92,10 @@ export default class mainin extends Component {
 
         <View style={{margin:20, backgroundColor:'#90caf9'}}>
           <Text style = {{padding: 10, fontSize: 20}} >
-              Panjang =  {this.state.alas} {"\n"}
-              Lebar =  {this.state.tinggi} {"\n"}
-              Luas = {(this.state.alas*this.state.tinggi/2)}
+              Panjang =  {this.state.panjang} {"\n"}
+              Lebar =  {this.state.lebar} {"\n"}
+              Tinggi =  {this.state.tinggi} {"\n"}
+              Volume = {(this.state.lebar*this.state.tinggi*this.state.panjang)}
           </Text>
          </View>
    </View>
