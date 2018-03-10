@@ -6,7 +6,7 @@ import { AppRegistry, TextInput, View, TouchableOpacity,} from 'react-native';
 import { Container, Header, Button, Icon, Title,
   Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
 
-export default class mainin extends Component {
+export default class VolumeBalok extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -44,7 +44,7 @@ export default class mainin extends Component {
           <List onPress={() => navigate('segitiga')}>
             <ListItem avatar>
               <Left>
-                <Thumbnail source={require('./../assets/Logo.jpg')} />
+                <Thumbnail source={require('./../../assets/Logo.jpg')} />
               </Left>
               <Body>
                 <Text>Perhitungan Segitiga</Text>
@@ -108,4 +108,4 @@ export default class mainin extends Component {
     );
   }
 }
-AppRegistry.registerComponent('AppForm2', () => main);
+AppRegistry.registerComponent('AppForm2', () => VolumeBalok);

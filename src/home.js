@@ -30,12 +30,16 @@ export default class mainin extends Component {
     return (
       <Container>
         <Content>
-        <TouchableOpacity onPress={() => navigate('segitiga')}>
+        <TouchableOpacity onPress={() => navigate('Segitiga')}>
           <Text style={ styles.textHeader }>Hitung Luas Segitiga</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigate('Cuaca')}>
           <Text style={ styles.textHeader }>Prakiraan Cuaca</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigate('Balok')}>
+          <Text style={ styles.textHeader }>Hitung Volume Balok</Text>
         </TouchableOpacity>
         </Content>
       </Container>

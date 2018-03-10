@@ -12,10 +12,10 @@ import {
   View
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import MainScreen from './main';
-import FirstScreen from './segitiga';
+import BalokScreen from './Balok/VolumeBalok';
+import SegitigaScreen from './Segitiga/segitiga';
 import HomeScreen from './home';
-import Cuaca from './Cuaca/Cuaca';
+import CuacaScreen from './Cuaca/Cuaca';
 
 const Screens = StackNavigator({
   HomeScreen: {
@@ -31,14 +31,44 @@ const Screens = StackNavigator({
       }
     },
   },
-  MainScreen: {
-    screen: MainScreen
-  },
-  segitiga: {
-    screen: FirstScreen
-  },
   Cuaca: {
-    screen: Cuaca
+    screen: CuacaScreen,
+    navigationOptions: {
+      title: 'Ramalan Cuaca',
+      headerStyle: {
+        backgroundColor: '#2196F3',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      }
+    },
+  },
+  Segitiga: {
+    screen: SegitigaScreen,
+    navigationOptions: {
+      title: 'Perhitungan Segitiga',
+      headerStyle: {
+        backgroundColor: '#2196F3',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      }
+    },
+  },
+  Balok: {
+    screen: BalokScreen,
+    navigationOptions: {
+      title: 'Perhitungan Volume Balok',
+      headerStyle: {
+        backgroundColor: '#2196F3',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      }
+    },
   },
 });
 

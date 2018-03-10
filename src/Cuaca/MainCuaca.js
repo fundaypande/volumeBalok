@@ -18,17 +18,6 @@ export default class MainCuaca extends Component {
     };
   }
 
-  static navigationOptions = {
-    title: 'Home',
-    headerStyle: {
-      backgroundColor: '#2196F3',
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    }
-  };
-
   render() {
     return (
       <View>
