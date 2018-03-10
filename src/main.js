@@ -1,3 +1,5 @@
+//main ini adalah perhitungan volume
+
 import React, { Component } from 'react';
 import { AppRegistry, TextInput, View, TouchableOpacity,} from 'react-native';
 
